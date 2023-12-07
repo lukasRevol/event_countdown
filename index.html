@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=Josefin+Sans:wght@300;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/main.css" />
+		<title>Event countdown</title>
+	</head>
+	<body>
+		<div class="counter-box">
+			<div class="hero">
+				<img src="./img/hero-img.jpg" alt="" class="hero_img" />
+				<div class="settings-box">
+					<h2 class="settings-heading">Settings</h2>
+					<label class="input-heading" for="name">Add event name:</label>
+					<input class="input-name" type="text" id="name" />
+                    
+					<label class="input-heading" for="date">date:</label>
+					<input class="input-date" type="date" id="date" />
+
+					<label class="input-heading" for="picture">Add event picture:</label>
+					<input class="input-picture" type="text" id="picture" />
+					<button class="save-event-btn">Save</button>
+				</div>
+				<button class="settings-btn"></button>
+			</div>
+
+			<div class="counter">
+				<h1 class="counter_heading">New event in:</h1>
+				<div class="time">
+					<div class="box days">
+						<h3 class="count">735</h3>
+						<p class="text">days</p>
+					</div>
+					<div class="box hours">
+						<h3 class="count">21</h3>
+						<p class="text">hours</p>
+					</div>
+					<div class="box minutes">
+						<h3 class="count">37</h3>
+						<p class="text">minutes</p>
+					</div>
+					<div class="box seconds">
+						<h3 class="count">43</h3>
+						<p class="text">seconds</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="./js/main.js" defer></script>
+	</body>
+</html>
