@@ -15,10 +15,10 @@ body {
 }
 
 .counter-box {
-  width: 600px;
   min-width: 300px;
-  max-width: 600px;
+  max-width: 1600px;
   display: grid;
+  grid-template-rows: repeat(2, auto);
   border: 1px solid rgb(255, 255, 255);
   border-radius: 15px;
   overflow: hidden;
@@ -29,9 +29,69 @@ body {
   position: relative;
   overflow: hidden;
 }
-.hero_img {
-  width: 100%;
+.hero .settings-btn {
   position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  z-index: 20;
+}
+.hero .settings-btn:hover {
+  background-color: #222;
+}
+.hero_img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #333;
+  z-index: 10;
+}
+.hero .settings-box {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  align-items: center;
+  padding: 2em;
+  color: #000000;
+  transition: background 1s, -webkit-backdrop-filter 1s;
+  transition: background 1s, backdrop-filter 1s;
+  transition: background 1s, backdrop-filter 1s, -webkit-backdrop-filter 1s;
+}
+.hero .settings-box .settings-heading {
+  grid-row: 1/2;
+}
+.hero .settings-box .settings-items {
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: column;
+}
+.hero .settings-box .settings-items input {
+  margin: 5px 0px 20px 0;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: none;
+}
+.hero .settings-box .settings-items .save-event-btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 20px;
+}
+
+.index-change {
+  z-index: -10;
+}
+
+.filters {
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 
 .counter {
@@ -50,50 +110,12 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 .counter .time .box {
-  padding: clamp(1em, 3vw, 2em) clamp(0.4em, 3vw, 1em);
+  padding: clamp(1em, 3vw, 2em) clamp(0.1em, 2vw, 1em);
   text-align: center;
   border: 1px solid black;
   border-radius: 15px;
+  width: clamp(4rem, 20vw, 8rem);
 }
 .counter .time .box .count {
-  font-size: clamp(1.2rem, 3vw, 3rem);
-}
-
-.settings-btn {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 30px;
-  width: 30px;
-  aspect-ratio: 1/1;
-  z-index: 10;
-}
-
-.settings-box {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 3em 90px 3em 3em;
-  background-color: rgba(255, 255, 255, 0.5);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  opacity: 1;
-  transition: opacity 1s;
-}
-.settings-box .input-heading {
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-}
-.settings-box input {
-  padding: 5px 10px;
-  border-radius: 5px;
-  border: none;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.205);
-}
-.settings-box .save-event-btn {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-top: 2em;
-  padding: 1em 2em;
-  cursor: pointer;
+  font-size: clamp(1.2rem, 5vw, 3rem);
 }/*# sourceMappingURL=main.css.map */
